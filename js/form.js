@@ -61,6 +61,8 @@ window.addEventListener('load', () => {
       formData.append('files[]', files[i])
     }
 
+    updateImagesBtn.classList.toggle('inactive', true);
+
     // Se envía el formulario al servidor con el método POST
     fetch('./upload_images.php', {
       method: 'POST',
