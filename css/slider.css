@@ -56,7 +56,8 @@
   background-size: 32px;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #fffa;
+  background-color: #fff8;
+  backdrop-filter: blur(8px);
   border-radius: 50%;
   margin: 0 16px;
   z-index: 1;
@@ -69,7 +70,7 @@
 }
 
 .slider__actions > div:hover {
-  background-color: white;
+  background-color: #fffa;
 }
 
 .slider__actions > .back-btn {
