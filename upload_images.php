@@ -14,12 +14,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Se sube cada archivo uno por uno
     for ($i = 0; $i < $filesAmount; $i++) {
       // Tomo la extensión del archivo ('png', 'jpg', 'jpeg', etc.)
+      $fileName = $_FILES['files']['name'];
       $fileExtention = pathinfo($_FILES['files']['name'][$i], PATHINFO_EXTENSION);
       
       /* Creo la ruta donde se guardará el nuevo archivo:
        * carpeta + número de archivo + extensión del archivo
        */
-      $targetPath = "{$path}/{$i}.{$fileExtention}";
+      $targetPath = "{$path}/{$fileName}.{$fileExtention}";
 
       // Muevo el archivo a la ruta en el servidor
       move_uploaded_file($_FILES['files']['tmp_name'][$i], $targetPath);
