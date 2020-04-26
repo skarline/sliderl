@@ -1,0 +1,15 @@
+.form-images {
+  min-height: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 4px;
+}
+
+.form-images > img {
+  height: 64px;
+  width: 64px;
+  margin-right: 4px;
+  margin-bottom: 4px;
+  border-radius: 2px;
+  object-fit: cover;
+}
