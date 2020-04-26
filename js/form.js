@@ -24,7 +24,7 @@ window.addEventListener('load', () => {
     const files = imagesInput.files;
 
     // Si el input está vacío, el botón de actualizar slider se pondrá inactivo, si no, se pondrá activo
-    if (files.length < 1) {
+    if (files.length > 0) {
       updateImagesBtn.classList.toggle('inactive', false);
     } else {
       updateImagesBtn.classList.toggle('inactive', true);
