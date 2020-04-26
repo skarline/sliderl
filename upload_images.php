@@ -14,7 +14,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Se sube cada archivo uno por uno
     for ($i = 0; $i < $filesAmount; $i++) {
       // Tomo la extensión del archivo ('png', 'jpg', 'jpeg', etc.)
-      $fileName = $_FILES['files']['name'];
+      $fileName = $_FILES['files']['name'][$i];
       $fileExtention = pathinfo($_FILES['files']['name'][$i], PATHINFO_EXTENSION);
       
       /* Creo la ruta donde se guardará el nuevo archivo:
